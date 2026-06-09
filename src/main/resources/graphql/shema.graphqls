@@ -1,0 +1,28 @@
+type Query {
+    membro(id: ID!): Membro
+    membros: [Membro]
+}
+
+type Mutation {
+    criarMembro(
+        id: ID!
+        nome: String!,
+        email: String!
+    ): Membro
+
+    atualizarMembro(
+        id: ID!,
+        nome: String!,
+        email: String!
+    ): Membro
+
+    deletarMembro(
+        id: ID!
+    ): Boolean
+}
+
+type Membro {
+    id: ID!
+    nome: String!
+    email: String!
+}
