@@ -7,9 +7,24 @@ Java 17
 Spring Boot 3
 Spring for GraphQL
 Gradle (Build Tool)
-type Membro { id: ID! nome: String! email: String! } type Query { membros: [Membro!]! membro(id: ID!): Membro }
+type Membro { id: ID!
+nome: String!
+email: String!
+}
 
-type Mutation { criarMembro(nome: String!, email: String!): Membro! atualizarMembro(id: ID!, nome: String, email: String): Membro deletarMembro(id: ID!): Boolean! }
+type Query { 
+membros: [Membro!]! 
+membro(id: ID!): Membro
+}
+
+type Mutation { 
+criarMembro(nome: String!,
+email: String!): Membro! 
+atualizarMembro(id: ID!,
+nome: String,
+email: String):Membro 
+
+deletarMembro(id: ID!): Boolean! }
 
 Como compilar
 
