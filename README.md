@@ -39,7 +39,10 @@ cd spring-boot-graphql
 
 Executar no terminal com o diretorio acima
 
-./gradlew bootRun
+Linux
+chmod +x gradlew // para criar um executavel
+
+./gradlew bootRun //Para rodar
 
 ou no Windows:
 
