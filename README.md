@@ -45,7 +45,7 @@ type Mutation {
 }
 ```
 
-## Como Compilar
+## Como Compilar e Executar
 
 ### Clonar o Projeto
 
@@ -59,26 +59,121 @@ git clone <URL_DO_REPOSITORIO>
 cd spring-boot-graphql
 ```
 
-### Linux
+---
 
-Abra o terminal no diretório do projeto e execute:
+## Linux (Ubuntu/Debian)
+
+### Instalar Java 17
+
+```bash
+sudo apt update
+sudo apt install openjdk-17-jdk
+```
+
+Verifique a instalação:
+
+```bash
+java -version
+javac -version
+```
+
+Resultado esperado:
+
+```text
+openjdk version "17.x.x"
+javac 17.x.x
+```
+
+### Dar Permissão ao Gradle Wrapper
 
 ```bash
 chmod +x gradlew
+```
+
+### Compilar o Projeto
+
+```bash
+./gradlew build
+```
+
+### Executar a Aplicação
+
+```bash
 ./gradlew bootRun
 ```
 
-### Windows
+O servidor estará disponível em:
+
+```text
+http://localhost:8080/graphql
+```
+
+### Gerar Arquivo JAR
+
+```bash
+./gradlew clean bootJar
+```
+
+O arquivo será gerado em:
+
+```text
+build/libs/
+```
+
+### Executar o JAR
+
+```bash
+java -jar build/libs/*.jar
+```
+
+---
+
+## Windows
+
+### Verificar Instalação do Java
+
+```cmd
+java -version
+javac -version
+```
+
+### Compilar
+
+```cmd
+gradlew.bat build
+```
+
+### Executar
 
 ```cmd
 gradlew.bat bootRun
 ```
 
-## Operações CRUD via PowerShell Com Administrador
+### Gerar JAR
+
+```cmd
+gradlew.bat clean bootJar
+```
+
+### Executar JAR
+
+```cmd
+java -jar build\libs\graphqpl-0.0.1-SNAPSHOT.jar
+```
+
+---
+
+## Endpoint GraphQL
+
+Todas as operações utilizam o endpoint:
+
+```http
+POST http://localhost:8080/graphql
+```
+
+## Operações CRUD via PowerShell WINDOWS
 
 ### Read
-
-Altere a parte `query` para consultar apenas os dados desejados.
 
 ```powershell
 Invoke-RestMethod `
@@ -120,6 +215,40 @@ Invoke-RestMethod `
 -ContentType "application/json" `
 -Body '{"query":"mutation { deletarMembro(id:\"ID_DESEJADO\") }"}' |
 ConvertTo-Json -Depth 10
+```
+
+## Operações CRUD via Linux (curl)
+
+### Read
+
+```bash
+curl -X POST http://localhost:8080/graphql \
+-H "Content-Type: application/json" \
+-d '{"query":"{ membros { id nome email } }"}'
+```
+
+### Create
+
+```bash
+curl -X POST http://localhost:8080/graphql \
+-H "Content-Type: application/json" \
+-d '{"query":"mutation { criarMembro(nome:\"Joao\", email:\"joao@email.com\") { id nome email } }"}'
+```
+
+### Update
+
+```bash
+curl -X POST http://localhost:8080/graphql \
+-H "Content-Type: application/json" \
+-d '{"query":"mutation { atualizarMembro(id:\"1\", nome:\"Joao Atualizado\", email:\"novo@email.com\") { id nome email } }"}'
+```
+
+### Delete
+
+```bash
+curl -X POST http://localhost:8080/graphql \
+-H "Content-Type: application/json" \
+-d '{"query":"mutation { deletarMembro(id:\"1\") }"}'
 ```
 
 ## Conclusão
