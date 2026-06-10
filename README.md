@@ -31,13 +31,14 @@ email: String):Membro
 
 deletarMembro(id: ID!): Boolean! }
 
+
 Como compilar
 
 Clonar o projeto git clone Acessar a pasta 
 
-cd spring-boot-graphql
+spring-boot-graphql
 
-Executar no terminal com o diretorio acima
+No terminal no diretorio acima
 
 Linux
 chmod +x gradlew // para criar um executavel
