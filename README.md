@@ -1,12 +1,17 @@
 Trabalho de Engenharia de Software
+
 Tema: GraphQL
+
 Descrição: API GraphQL simples com operações CRUD para membros de academia.
 
 Tecnologias Utilizadas
+
 Java 17
 Spring Boot 3
 Spring for GraphQL
 Gradle (Build Tool)
+
+Schema GraphQL
 type Membro { id: ID!
 nome: String!
 email: String!
@@ -28,7 +33,11 @@ deletarMembro(id: ID!): Boolean! }
 
 Como compilar
 
-Clonar o projeto git clone Acessar a pasta cd spring-boot-graphql Executar
+Clonar o projeto git clone Acessar a pasta 
+
+cd spring-boot-graphql
+
+Executar no terminal com o diretorio acima
 
 ./gradlew bootRun
 
