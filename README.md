@@ -82,44 +82,44 @@ Altere a parte `query` para consultar apenas os dados desejados.
 
 ```powershell
 Invoke-RestMethod `
-    -Uri "http://localhost:8080/graphql" `
-    -Method POST `
-    -ContentType "application/json" `
-    -Body '{"query":"{ membros { id nome email } }"}' |
-    ConvertTo-Json -Depth 10
+-Uri "http://localhost:8080/graphql" `
+-Method POST `
+-ContentType "application/json" `
+-Body '{"query":"{ membros { id nome email } }"}' |
+ConvertTo-Json -Depth 10
 ```
 
 ### Create
 
 ```powershell
 Invoke-RestMethod `
-    -Uri "http://localhost:8080/graphql" `
-    -Method POST `
-    -ContentType "application/json" `
-    -Body '{"query":"mutation { criarMembro(nome:\"NOME NOVO\", email:\"EMAIL NOVO\") { id nome email } }"}' |
-    ConvertTo-Json -Depth 10
+-Uri "http://localhost:8080/graphql" `
+-Method POST `
+-ContentType "application/json" `
+-Body '{"query":"mutation { criarMembro(nome:\"NOME NOVO\", email:\"EMAIL NOVO\") { id nome email } }"}' |
+ConvertTo-Json -Depth 10
 ```
 
 ### Update
 
 ```powershell
 Invoke-RestMethod `
-    -Uri "http://localhost:8080/graphql" `
-    -Method POST `
-    -ContentType "application/json" `
-    -Body '{"query":"mutation { atualizarMembro(id:\"ID_DESEJADO\", nome:\"NOME DESEJADO\", email:\"EMAIL_DESEJADO\") { id nome email } }"}' |
-    ConvertTo-Json -Depth 10
+-Uri "http://localhost:8080/graphql" `
+-Method POST `
+-ContentType "application/json" `
+-Body '{"query":"mutation { atualizarMembro(id:\"ID_DESEJADO\", nome:\"NOME DESEJADO\", email:\"EMAIL_DESEJADO\") { id nome email } }"}' |
+ConvertTo-Json -Depth 10
 ```
 
 ### Delete
 
 ```powershell
 Invoke-RestMethod `
-    -Uri "http://localhost:8080/graphql" `
-    -Method POST `
-    -ContentType "application/json" `
-    -Body '{"query":"mutation { deletarMembro(id:\"ID_DESEJADO\") }"}' |
-    ConvertTo-Json -Depth 10
+-Uri "http://localhost:8080/graphql" `
+-Method POST `
+-ContentType "application/json" `
+-Body '{"query":"mutation { deletarMembro(id:\"ID_DESEJADO\") }"}' |
+ConvertTo-Json -Depth 10
 ```
 
 ## Conclusão
