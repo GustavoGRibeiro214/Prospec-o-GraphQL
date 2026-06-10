@@ -44,7 +44,6 @@ email: String):Membro
 deletarMembro(id: ID!): Boolean! }
 
 
-
 Como compilar
 
 Clonar o projeto git clone Acessar a pasta 
@@ -107,4 +106,4 @@ Maior flexibilidade para o cliente.
 Único endpoint para consultas e alterações.
 Melhor aproveitamento da rede Facilidade de evolução da API
 
-Uma otima API para sistemas que necessitam de maior controle e flexibilidades com so dados, mas em casos de sistemas menores e simples o REST ainda pode ser a melhor opção
+Uma otima API para sistemas que necessitam de maior controle e flexibilidades com os dados, mas em casos de sistemas menores e simples o REST ainda pode ser a melhor opção
