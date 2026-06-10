@@ -2,9 +2,12 @@ Trabalho de Engenharia de Software
 
 Tema: GraphQL
 
+
 Descrição: API GraphQL simples com operações CRUD para membros de academia.
 
+
 Tecnologias Utilizadas
+
 
 Java 17
 Spring Boot 3
