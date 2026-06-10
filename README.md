@@ -65,16 +65,35 @@ CRUD no POWERSHELL com administrador
 
 Read
 
-Invoke-RestMethod -Uri "http://localhost:8080/graphql" -Method POST -ContentType "application/json" -Body '{"query":"{ membros { id nome email } }"}' |(pode alterar dentro dos parenteses para retornar apenas os dados necessarios EX(nome email) vai retornar apenas o nome e o emailw) ConvertTo-Json -Depth 10
+Invoke-RestMethod
+-Uri "http://localhost:8080/graphql" 
+-Method POST 
+-ContentType "application/json" 
+-Body '{"query":"{ membros { id nome email } }"}' |(pode alterar dentro dos parenteses para retornar apenas os dados necessarios EX(nome email) vai retornar apenas o nome e o email) 
+ConvertTo-Json -Depth 10
 
 Creat
 
-Invoke-RestMethod -Uri "http://localhost:8080/graphql" -Method POST -ContentType "application/json" -Body '{"query":"mutation { criarMembro(nome:"NOME NOVO", email:"EMAIL NOVO") { id nome email } }"}' | ConvertTo-Json -Depth 10
+Invoke-RestMethod 
+-Uri "http://localhost:8080/graphql" 
+-Method POST -ContentType "application/json" 
+-Body '{"query":"mutation { criarMembro(nome:"NOME NOVO", email:"EMAIL NOVO") { id nome email } }"}' | 
+ConvertTo-Json -Depth 10
 
-Alterar Invoke-RestMethod -Uri "http://localhost:8080/graphql" -Method POST -ContentType "application/json" -Body '{"query":"mutation { atualizarMembro(id:"ID_DESEJADO", nome:"NOME DESEJADO", email:"EMAIL DESEJADO") { id nome email } }"}' | ConvertTo-Json -Depth 10
+Alterar 
+
+Invoke-RestMethod 
+-Uri "http://localhost:8080/graphql" 
+-Method POST -ContentType "application/json" 
+-Body '{"query":"mutation { atualizarMembro(id:"ID_DESEJADO", nome:"NOME DESEJADO", email:"EMAIL DESEJADO") { id nome email } }"}' | 
+ConvertTo-Json -Depth 10
 
 Delete
 
-deletar Invoke-RestMethod -Uri "http://localhost:8080/graphql" -Method POST -ContentType "application/json" -Body '{"query":"mutation { deletarMembro(id:"ID Desejado para deletara") }"}' | ConvertTo-Json -Depth 10
+Invoke-RestMethod
+-Uri "http://localhost:8080/graphql" 
+-Method POST -ContentType "application/json" 
+-Body '{"query":"mutation { deletarMembro(id:"ID Desejado para deletara") }"}' | 
+ConvertTo-Json -Depth 10
 
 Principais Vantagens do GraphQL Redução de Overfetching Maior flexibilidade para o cliente Único endpoint para consultas e alterações Melhor aproveitamento da rede Facilidade de evolução da API
