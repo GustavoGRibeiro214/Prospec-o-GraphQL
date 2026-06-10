@@ -74,7 +74,7 @@ chmod +x gradlew
 gradlew.bat bootRun
 ```
 
-## Operações CRUD via PowerShell
+## Operações CRUD via PowerShell Com Administrador
 
 ### Read
 
