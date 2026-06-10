@@ -63,14 +63,7 @@ cd spring-boot-graphql
 
 ## Linux (Ubuntu/Debian)
 
-### Instalar Java 17
-
-```bash
-sudo apt update
-sudo apt install openjdk-17-jdk
-```
-
-Verifique a instalação:
+Verifique a instalação(No minimo Java 17):
 
 ```bash
 java -version
