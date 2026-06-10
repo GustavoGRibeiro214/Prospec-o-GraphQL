@@ -12,19 +12,28 @@ Spring for GraphQL
 Gradle (Build Tool)
 
 Schema GraphQL
+
 type Membro { id: ID!
+
 nome: String!
+
 email: String!
+
 }
 
-type Query { 
-membros: [Membro!]! 
+type Query {
+
+membros: [Membro!]!
+
 membro(id: ID!): Membro
+
 }
 
-type Mutation { 
+type Mutation {
+
 criarMembro(nome: String!,
-email: String!): Membro! 
+email: String!): Membro!
+
 atualizarMembro(id: ID!,
 nome: String,
 email: String):Membro 
