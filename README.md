@@ -48,9 +48,11 @@ Clonar o projeto git clone Acessar a pasta
 
 spring-boot-graphql
 
-No terminal no diretorio acima
-
 Linux
+Abra o terminal no Diretorio acima
+
+execute
+
 chmod +x gradlew // para criar um executavel
 
 ./gradlew bootRun //Para rodar
