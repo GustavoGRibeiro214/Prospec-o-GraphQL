@@ -65,13 +65,13 @@ gradlew.bat bootRun
 
 CRUD no POWERSHELL com administrador
 
-Read
+Read - Altere a Parte query, para consultar apenas os dados que você quer
 
 Invoke-RestMethod
 -Uri "http://localhost:8080/graphql" 
 -Method POST 
 -ContentType "application/json" 
--Body '{"query":"{ membros { id nome email } }"}' |(pode alterar dentro dos parenteses para retornar apenas os dados necessarios EX(nome email) vai retornar apenas o nome e o email) 
+-Body '{"query":"{ membros { id nome email } }"}' |
 ConvertTo-Json -Depth 10
 
 Creat
