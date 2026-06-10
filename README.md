@@ -96,4 +96,12 @@ Invoke-RestMethod
 -Body '{"query":"mutation { deletarMembro(id:"ID Desejado para deletara") }"}' | 
 ConvertTo-Json -Depth 10
 
-Principais Vantagens do GraphQL Redução de Overfetching Maior flexibilidade para o cliente Único endpoint para consultas e alterações Melhor aproveitamento da rede Facilidade de evolução da API
+
+Conclusão Final 
+
+Principais Vantagens do GraphQL Redução de Overfetching.
+Maior flexibilidade para o cliente.
+Único endpoint para consultas e alterações.
+Melhor aproveitamento da rede Facilidade de evolução da API
+
+Uma otima API para sistemas que necessitam de maior controle e flexibilidades com so dados, mas em casos de sistemas menores e simples o REST ainda pode ser a melhor opção
