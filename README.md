@@ -41,6 +41,7 @@ email: String):Membro
 deletarMembro(id: ID!): Boolean! }
 
 
+
 Como compilar
 
 Clonar o projeto git clone Acessar a pasta 
